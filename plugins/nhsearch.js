@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
 		txt += `*${nomor += 1}. ${i.title}*\n`
 		txt += `ID: ${i.id}\n`
 		txt += `Language: ${i.language}\n`
-		txt += `=`.repeat(25) + `\n`
+		txt += `=`-(25) + `\n`
 	}
 	m.reply(txt, null, { contextInfo: { externalAdReply: { title: res[0].title, body: 'Language: ' + res[0].language, thumbnailUrl: res[0].thumbnail, sourceUrl: res[0].thumbnail }}})
 }
