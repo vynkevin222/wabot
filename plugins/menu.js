@@ -32,9 +32,9 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─『 %me 』
-│ Hai, %name!
+╭─『 SNEAZY BOT 』
 │
+│ Hai, %name! 👋
 │ Tersisa *%limit Limit*
 │ Role *%role*
 │ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
@@ -57,9 +57,7 @@ const defaultMenu = {
   header: '┏┉┄┈┈┈『%category』┈┈┈┈┈┉┓',
   body: '┆➜ %cmd %islimit %isPremium',
   footer: '└┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n',
-  after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+  after: `*Sneazybot^8.0.9*
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
@@ -173,8 +171,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
         }
     }
 }
-let fkon = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `Relldev`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN: Rlxfly UwU\nitem1.TEL;waid=6283820073017:6283820073017\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
-conn.send3ButtonImg(m.chat, thumb, `Hi! Im ${conn.user.name}\n\nHere my menu...`, text.trim(), 'ping', '.ping', 'owner', '-owner', 'donasi', '.donasi', reply)
+let fkon = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `Finn`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN: SneazyVin\nitem1.TEL;waid=6285732415700:6285732415700\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+conn.send3ButtonImg(m.chat, thumb, `Hi! Im ${conn.user.name}\n\nHere my menu...`, text.trim(), 'PING ⚡', '.ping', 'OWNER 👤', '-owner', 'DONASI 💵', '.donasi', reply)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
