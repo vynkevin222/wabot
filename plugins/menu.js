@@ -32,18 +32,13 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─『 SNEAZY BOT 』
+╭─『 Info Bot 』
 │
-│ Hai, %name! 👋
 │ Tersisa *%limit Limit*
 │ Role *%role*
 │ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
 │ %totalexp XP in Total
 │ 
-│ Tanggal: *%week %weton, %date*
-│ Tanggal Islam: *%dateIslamic*
-│ Waktu: *%time*
-│
 │ Uptime: *%uptime (%muptime)*
 │ Database: %rtotalreg of %totalreg
 │ Script :
@@ -172,7 +167,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
 }
 let fkon = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `Finn`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN: SneazyVin\nitem1.TEL;waid=6285732415700:6285732415700\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
-conn.send3ButtonImg(m.chat, thumb, `Hi! Im ${conn.user.name}\n\nHere my menu...`, text.trim(), 'PING ⚡', '.ping', 'OWNER 👤', '-owner', 'DONASI 💵', '.donasi', reply)
+conn.send3ButtonImg(m.chat, thumb, `Hai %name 👋, \n\n📅 Tanggal: *%week %weton, %date*\n☪️ Tanggal Islam: *%dateIslamic*\n🕐 Waktu: *%time*\n\n`, text.trim(), 'PING ⚡', '.ping', 'OWNER 👤', '-owner', 'DONASI 💵', '.donasi', reply)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
